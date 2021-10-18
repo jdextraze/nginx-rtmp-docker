@@ -17,5 +17,7 @@ EXPOSE 1935
 
 ADD nginx.conf /usr/local/nginx/conf/
 ADD index.html /usr/local/nginx/html/
+ADD chromecast.html /usr/local/nginx/html/
+COPY dist/ user/local/nginx/html/dist/
 
 CMD ["/usr/local/nginx/sbin/nginx", "-g", "daemon off;"]
